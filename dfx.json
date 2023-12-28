@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "icp_vote_backend": {
+      "candid": "src/icp_vote_backend/icp_vote_backend.did",
+      "package": "icp_vote_backend",
+      "type": "rust"
+    },
+    "icp_vote_frontend": {
+      "dependencies": [
+        "icp_vote_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_vote_frontend/src/index.html"
+      },
+      "source": [
+        "src/icp_vote_frontend/assets",
+        "dist/icp_vote_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
